@@ -1,0 +1,565 @@
+
+/* ===== RESET E ESTILOS GLOBAIS ===== */
+/* Remove margens e paddings padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define fonte padrão e cor de texto */
+body {
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+/* Container responsivo com padding */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER/NAVEGAÇÃO ===== */
+/* Barra de navegação fixa no topo */
+header {
+    position: sticky;
+    padding-top: 3px;
+    height: 80px;
+    top: 0;
+    z-index: 50;
+    background-color: #BE45DC;
+    box-shadow: #000000;
+}
+
+/* Estilo da navegação */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+
+/* Logo da clínica */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-left: -250px;
+}
+
+.imagemlogo {
+
+    width: 80px;
+    height: auto;
+}
+
+/* Menu desktop */
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;
+}
+
+/* Links do menu */
+.nav-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #8A24A4;
+}
+
+/* Botão CTA do header */
+.nav-btn {
+    background-color: #cc6de3;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #8A24A4;
+        color: #fff !important; /* força a cor sobre o hover genérico */
+transition: background-color 0.3s ease;
+    
+}
+
+/* Menu mobile (hamburger) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ===== SEÇÃO HERO ===== */
+/* Seção principal com gradiente de fundo */
+.hero {
+    background: linear-gradient(to right, #fff);
+    padding: 5rem 0;
+}
+
+/* Grid para hero (2 colunas em desktop, 1 em mobile) */
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Título principal */
+.hero h1 {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+/* Subtítulo */
+.hero p {
+    font-size: 1.125rem;
+    color: #000000;
+    margin-bottom: 2rem;
+}
+
+/* Botão CTA */
+.btn {
+    background-color: #8A24A4;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #BE45DC;
+}
+
+/* Placeholder para imagem */
+.hero-image {
+    background-image: url('/imagens/loja.jpg');
+    border-radius: 0.5rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+/* ===== SEÇÃO SOBRE ===== */
+/* Seção com fundo branco */
+.about {
+    padding: 4rem 0;
+    background-color: #f5ccff;
+}
+
+/* Título das seções */
+.section-title {
+    font-size: 2rem;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Card de conteúdo */
+.about-card {
+    max-width: 48rem;
+    margin: 0 auto;
+    background-color: #f9fafb;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.about-card p {
+    font-size: 1.125rem;
+    color: #000000;
+    line-height: 1.8;
+}
+
+/* ===== SEÇÃO SERVIÇOS ===== */
+/* Seção com fundo cinza */
+.services {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+/* Grid de serviços (3 colunas em desktop, 1 em mobile) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Card de serviço */
+.service-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    color: #000000;
+    margin-bottom: 0.75rem;
+}
+
+.service-card p {
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+/* Botão outline */
+.btn-outline {
+    background-color: transparent;
+    color: #BE45DC;
+    border: 1px solid #BE45DC;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #eabff6;
+}
+
+/* ===== SEÇÃO EQUIPE ===== */
+/* Seção com fundo branco */
+.team {
+    padding: 4rem 0;
+    background-color: #f5ccff;
+}
+
+/* Grid de diferenciais */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Card de diferencial */
+.team-card {
+    border-left: 4px solid #BE45DC;
+    background-color: #ffffffc3;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.team-card h3 {
+    font-size: 1.25rem;
+    color: #000000;
+    margin-bottom: 0.75rem;
+}
+
+.team-card p {
+    color: #000000;
+}
+
+/* ===== SEÇÃO DEPOIMENTOS ===== */
+/* Seção com fundo cinza */
+.testimonials {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+/* Grid de depoimentos */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Card de depoimento */
+.testimonial-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+    color: #000000;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.testimonial-card .author {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+}
+
+.testimonial-card .author-name {
+    font-weight: bold;
+    color: #000000;
+}
+
+.testimonial-card .author-pet {
+    font-size: 0.875rem;
+    color: #000000;
+}
+
+/* ===== SEÇÃO AGENDAMENTO ===== */
+/* Seção com fundo branco */
+.appointment {
+    padding: 4rem 0;
+    background-color: #f5ccff;
+}
+
+/* Container do formulário */
+.form-container {
+    max-width: 48rem;
+    margin: 0 auto;
+    background-color: #f9fafb;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+/* Grupo de formulário */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Label do formulário */
+.form-group label {
+    display: block;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Campos de entrada */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+/* Foco nos campos */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #BE45DC;
+}
+
+/* Textarea */
+.form-group textarea {
+    resize: vertical;
+    min-height: 6rem;
+}
+
+/* Botão de envio */
+.btn-submit {
+    width: 100%;
+    background-color: #BE45DC;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #BE45DC;
+}
+
+/* ===== SEÇÃO BLOG ===== */
+/* Seção com fundo cinza */
+.blog {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+/* Grid de artigos */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Card de artigo */
+.blog-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagem de fundo do artigo */
+.blog-image {
+    height: 10rem;
+    background-image: url('/imagens/gatos.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-image.image-2 {
+    background-image: url('/imagens/cachorro.avif');
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-image.image-3 {
+    background-image: url('/imagens/chinchila.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Conteúdo do artigo */
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-content h3 {
+    font-size: 1.25rem;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.blog-content p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.blog-content a {
+    color: #BE45DC;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.blog-content a:hover {
+    color: #BE45DC;
+}
+
+/* ===== FOOTER ===== */
+/* Rodapé */
+footer {
+    background-color: #BE45DC;
+    color: white;
+    padding: 3rem 0;
+}
+
+/* Grid do footer */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Coluna do footer */
+.footer-column h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.footer-column p {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+/* Linha divisória */
+.footer-divider {
+    border-top: 1px solid #fff;
+    padding-top: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+/* Estilos para tablets e telas pequenas */
+@media (max-width: 768px) {
+
+    /* Esconde menu desktop, mostra hamburger */
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hero em coluna única */
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Título menor em mobile */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    /* Serviços em coluna única */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Equipe em coluna única */
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Depoimentos em coluna única */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Blog em coluna única */
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer em coluna única */
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para telas muito pequenas */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .nav-menu a {
+        font-size: 0.875rem;
+    }
+}
